@@ -1,6 +1,9 @@
+* { box-sizing: border-box;}
+
 html {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,31 +15,31 @@ body {
 nav {
   height: 100px;
   position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 .nav-bar {
-  margin: 25px 0 0 15px;
+  margin: 25px 15px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  gap: 460px;
-  padding: 0 15px 0 15px;
-  background-color: rgba(146, 90, 59, 0.5);
+  gap: 20px;
+  padding: 0 16px;
+  background-color: rgba(146, 90, 59, 0.6);
   border-radius: 30px;
-  width: 100%;
   height: 50px;
-  backdrop-filter: blur(50px);
-  box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 1);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 4px 30px 5px rgba(0,0,0,1);
 }
 
-h1 {
-  color: #ffd93d;
-}
-
+/* desktop */
 ul {
   display: flex;
-  justify-content: space-around;
   gap: 50px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul li a {
@@ -60,6 +63,14 @@ ul li a::after {
 
 ul li a:hover::after {
   transform: scaleX(1);
+}
+
+/* hamburger default hidden */
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #ffd93d;
+  cursor: pointer;
 }
 
 /* HERO SECTION */
@@ -133,4 +144,35 @@ ul li a:hover::after {
 .landpage-kanan .tombol span button {
   background-color: #dbcbbd;
   color: #87431d;
+}
+
+@media (max-width: 992px) {
+  .nav-bar img { width: 180px; height: auto; }
+  ul {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background: rgba(146, 90, 59, 0.95);
+    border-radius: 0 0 15px 15px;
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px 24px;
+    margin: 0;
+    display: none;
+
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity .2s ease, transform .2s ease;
+    pointer-events: none;
+  }
+
+  ul.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  #menu-toggle { display: block; }
 }
