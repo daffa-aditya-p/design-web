@@ -18,7 +18,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 500px;
+  gap: 460px;
   padding: 0 15px 0 10px;
   background-color: rgba(146, 90, 59, 0.6);
   border-radius: 30px;
