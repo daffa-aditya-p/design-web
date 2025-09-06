@@ -16,6 +16,8 @@ body {
   background-color: #3a0001;
   font-family: "Poppins", sans-serif;
   min-height: 2500px;
+  padding: 0;
+  margin: 0;
 }
 
 nav {
@@ -429,6 +431,56 @@ ul li a:hover::after {
   color: #87431d;
   transform: scaleX(0.95);
 }
+
+
+/* Footer */
+
+footer{
+  height: 250px;
+}
+.gradasi{
+  margin-top: 150px;
+  display: block;
+  width: 98.8vw;
+  height: 150px;
+  background: linear-gradient(#3a0001, #dbcbbd);
+}
+
+.isi-footer{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 200px;
+  background-color: #dbcbbd;
+  height: 100px;
+  width: 100%;
+}
+
+.kosong-footer{
+  width: 3px;
+  height: 50px;
+  background-color: #3a0001;
+  border-radius: 30px;
+}
+
+.menu-footer li a{
+  color: #3a0001;
+}
+.menu-footer li a::after{
+  background: #3a0001;
+}
+.isi-footer h2{
+  color: #3a0001;
+}
+.cpr{
+  display: flex;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+/* Footer end */
 
 
 @media (max-width: 992px) {
