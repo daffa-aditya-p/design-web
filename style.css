@@ -13,7 +13,8 @@ html {
 }
 
 body {
-  background-color: #3a0001;
+  background: radial-gradient(ellipse at top, #c87941 0%, #87431d 50%),
+    linear-gradient(135deg, #c87941 0%, #87431d 100%);
   font-family: "Poppins", sans-serif;
   min-height: 2500px;
   padding: 0;
@@ -34,7 +35,7 @@ nav {
   align-items: center;
   gap: 20px;
   padding: 0 50px;
-  background-color: rgba(146, 90, 59, 0.6);
+  background-color: rgba(58, 0, 1, .6);
   border-radius: 30px;
   height: 50px;
   backdrop-filter: blur(30px);
@@ -111,7 +112,6 @@ ul li a:hover::after {
   animation: animasi-kipas 3s infinite ease-in-out;
 }
 
-
 .lanpag-decor .wayang-kanan {
   z-index: 2;
   width: 300px;
@@ -122,14 +122,12 @@ ul li a:hover::after {
   /* bottom: 200px; */
 }
 
-
 .lanpag-decor .wayang-kiri {
   width: 290px;
   z-index: 3;
   bottom: -175px;
   animation: animasi-wayang-kiri 3s infinite ease-in-out;
 }
-
 
 .landpage-kanan {
   height: 450px;
@@ -177,8 +175,8 @@ ul li a:hover::after {
   font-size: 18px;
   background-color: transparent;
   border: none;
-  color: #87431d;
-  border: #87431d 2px solid;
+  color: #3a0001;
+  border: #3a0001 2px solid;
   transition: 0.5s ease-in-out;
 }
 .landpage-kanan .tombol span button {
@@ -193,25 +191,31 @@ ul li a:hover::after {
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
-  background-color: #87431d;
+  background-color: #3a0001;
   border: none;
-  box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 1);
-  color: #dbcbbd;
+  box-shadow: 0 0px 20px 2px rgba(0, 0, 0, .5);
+  color: #dbcbbd; 
 }
 
 .landpage-kanan .tombol span button:hover {
   background-color: #dbcbbd;
-  color: #87431d;
+  color: #3a0001;
   cursor: pointer;
 }
 
 .tulisan-2 {
   color: #dbcbbd;
-  padding: 10px 40px 10px 40px;
+  padding: 40px 100px;
+}
+.tulisan-2 h1{
+  text-indent: 30px;
+}
+.tulisan-2 p{
+  text-indent: 30px;
 }
 
 #garis {
-  width: 200px;
+  width: 250px;
   height: 3px;
   border-radius: 100px;
   background-color: #dbcbbd;
@@ -230,12 +234,12 @@ ul li a:hover::after {
   margin-bottom: 30px;
   color: #ffd93d;
   font-weight: 900;
-  background-color: #87431d;
+  background-color: #3a0001;
   text-align: center;
   width: 450px;
   height: 50px;
   border-radius: 40px;
-  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, .5);
 }
 
 #game {
@@ -251,9 +255,10 @@ ul li a:hover::after {
 .kategori-msm {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin: 30px 20px;
   text-decoration: none;
   gap: 40px;
+  
 }
 
 .kategori-msm a .bagian {
@@ -267,7 +272,7 @@ ul li a:hover::after {
   height: 300px;
   text-decoration: none;
   background-color: #ffd93d;
-  
+
   box-shadow: 0 0px 7px 1px #ffd93d;
   border-radius: 30px;
   padding-bottom: 20px;
@@ -298,18 +303,18 @@ ul li a:hover::after {
   width: 150px;
   cursor: pointer;
   border-radius: 20px;
-  border: 2px solid #ffffff;
+  border: 2px solid #3a0001;
   background-color: transparent;
-  color: #ffffff;
+  color: #3a0001;
   font-size: 20px;
   font-weight: 700;
   transition: 0.5s ease-in-out;
 }
 
 .kategori-msm a .bagian button:hover {
-  color: #3a0001;
-  background-color: #dbcbbd;
-  border: #dbcbbd;
+  color: #ffd93d;
+  background-color: #3a0001;
+  border: #3a0001;
   box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -334,12 +339,12 @@ ul li a:hover::after {
   /* margin-bottom: 30px; */
   color: #dbcbbd;
   font-weight: 900;
-  background-color: #87431d;
+  background-color: #3a0001;
   text-align: center;
   width: 250px;
   height: 50px;
   border-radius: 40px;
-  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, .5);
 }
 .ayo .ajak > h1 {
   font-size: 26px;
@@ -379,12 +384,12 @@ ul li a:hover::after {
   max-width: 98vw;
 }
 
-#future{
+#future {
   width: 2100px;
   max-width: 98vw;
 }
 
-.pertanyaan{
+.pertanyaan {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -397,24 +402,24 @@ ul li a:hover::after {
   text-align: center;
 }
 
-.pertanyaan .jawaban  {
+.pertanyaan .jawaban {
   display: flex;
   gap: 100px;
 }
 .pertanyaan .jawaban button {
-  height: 70px ;
+  height: 70px;
   width: 250px;
   border-radius: 30px;
   background-color: transparent;
-  color: #87431d;
-  border: #87431d 2px solid;
+  color: #3a0001;
+  border: #3a0001 2px solid;
   font-weight: 900;
   font-size: 20px;
   transition: 0.4s ease-in-out;
 }
 .pertanyaan .jawaban button:hover {
   box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 1);
-  background-color: #87431d;
+  background-color: #3a0001;
   color: #ffff;
   transform: scaleX(0.95);
 }
@@ -422,7 +427,6 @@ ul li a:hover::after {
 .pertanyaan .jawaban span button {
   color: #ffff;
   border: #ffff 2px solid;
-  
 }
 
 .pertanyaan .jawaban span button:hover {
@@ -432,21 +436,20 @@ ul li a:hover::after {
   transform: scaleX(0.95);
 }
 
-
 /* Footer */
 
-footer{
+footer {
   height: 250px;
 }
-.gradasi{
+.gradasi {
   margin-top: 150px;
   display: block;
   width: 98.8vw;
   height: 150px;
-  background: linear-gradient(#3a0001, #dbcbbd);
+  background: linear-gradient(#87431d, #dbcbbd);
 }
 
-.isi-footer{
+.isi-footer {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -458,30 +461,29 @@ footer{
   width: 100%;
 }
 
-.kosong-footer{
+.kosong-footer {
   width: 3px;
   height: 50px;
   background-color: #3a0001;
   border-radius: 30px;
 }
 
-.menu-footer li a{
+.menu-footer li a {
   color: #3a0001;
 }
-.menu-footer li a::after{
+.menu-footer li a::after {
   background: #3a0001;
 }
-.isi-footer h2{
+.isi-footer h2 {
   color: #3a0001;
 }
-.cpr{
+.cpr {
   display: flex;
   align-self: flex-start;
   justify-self: center;
 }
 
 /* Footer end */
-
 
 @media (max-width: 992px) {
   .nav-bar img {
@@ -500,20 +502,20 @@ footer{
     padding: 16px 24px;
     margin: 0;
     display: none;
-    
+
     opacity: 0;
     transform: translateY(-8px);
     transition: opacity 0.2s ease, transform 0.2s ease;
     pointer-events: none;
   }
-  
+
   ul.active {
     display: flex;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
   }
-  
+
   #menu-toggle {
     display: block;
   }
@@ -557,9 +559,10 @@ footer{
   100% {
     transform: scale(1);
     rotate: 0deg;
-  }}
+  }
+}
 
-  @keyframes animasi-wayang-kiri {
+@keyframes animasi-wayang-kiri {
   0% {
     transform: scale(1);
     rotate: 0deg;
