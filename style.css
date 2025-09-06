@@ -1,4 +1,6 @@
-* { box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 html {
   padding: 0;
@@ -25,12 +27,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding: 0 16px;
+  padding: 0 50px;
   background-color: rgba(146, 90, 59, 0.6);
   border-radius: 30px;
   height: 50px;
   backdrop-filter: blur(30px);
-  box-shadow: 0 4px 30px 5px rgba(0,0,0,1);
+  box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 1);
 }
 
 /* desktop */
@@ -110,7 +112,7 @@ ul li a:hover::after {
   color: #dbcbbd;
   font-size: 52px;
   text-align: end;
-   text-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 1)
+  text-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 1);
 }
 .landpage-kanan .tulisan img {
   display: flex;
@@ -125,8 +127,6 @@ ul li a:hover::after {
   gap: 150px;
   margin-top: 30px;
   padding-top: 10px;
-  
-  
 }
 
 .landpage-kanan .tombol button {
@@ -146,8 +146,152 @@ ul li a:hover::after {
   color: #87431d;
 }
 
+.tulisan-2 {
+  color: #dbcbbd;
+  padding: 10px 40px 10px 40px;
+}
+
+#garis {
+  width: 200px;
+  height: 3px;
+  border-radius: 100px;
+  background-color: #dbcbbd;
+  margin: -10px -5px 25px;
+}
+
+.temp {
+  display: flex;
+  justify-content: center;
+}
+.tengah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #ffd93d;
+  font-weight: 900;
+  background-color: #87431d;
+  text-align: center;
+  width: 450px;
+  height: 50px;
+  border-radius: 40px;
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 1);
+}
+
+.kategori-msm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.kategori-msm .bagian {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 300px;
+  background-color: #ffd93d;
+  margin: 20px;
+  box-shadow: 0 0px 7px 1px #ffd93d;
+  border-radius: 30px;
+  padding-bottom: 20px;
+}
+
+.kategori-msm .bagian h1 {
+  font-size: 45px;
+  margin-bottom: 0;
+}
+
+.kategori-msm .bagian h2 {
+  line-height: 25px;
+}
+
+.kategori-msm .bagian h2 span {
+  font-size: 15px;
+}
+
+.kategori-msm .bagian button {
+  height: 50px;
+  width: 150px;
+  border-radius: 20px;
+  border: none;
+  background-color: #dbcbbd;
+  color: #3a0001;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.5);
+}
+
+.ayo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.tempt1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ayo .ajak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  /* margin-bottom: 30px; */
+  color: #dbcbbd;
+  font-weight: 900;
+  background-color: #87431d;
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  border-radius: 40px;
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 1);
+}
+.ayo .ajak > h1 {
+  font-size: 26px;
+}
+
+.ayo h1 {
+  color: #dbcbbd;
+  font-size: 64px;
+  margin: 0;
+}
+.ayo img{
+  margin: 20px;
+}
+
+.ayo button {
+  margin: 30px;
+  height: 40px;
+  width: 100px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #ffd93d;
+  border: none;
+  box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 1);
+  color: #87431d;
+  margin-bottom: 30px;
+}
+
+#pembatas {
+  width: 2100px;
+  max-width: 98vw;
+}
 @media (max-width: 992px) {
-  .nav-bar img { width: 180px; height: auto; }
+  .nav-bar img {
+    width: 180px;
+    height: auto;
+  }
   ul {
     position: fixed;
     top: 100px;
@@ -163,7 +307,7 @@ ul li a:hover::after {
 
     opacity: 0;
     transform: translateY(-8px);
-    transition: opacity .2s ease, transform .2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
     pointer-events: none;
   }
 
@@ -174,5 +318,7 @@ ul li a:hover::after {
     pointer-events: auto;
   }
 
-  #menu-toggle { display: block; }
+  #menu-toggle {
+    display: block;
+  }
 }
