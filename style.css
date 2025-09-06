@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+}
+
 html {
   padding: 0;
   margin: 0;
@@ -32,7 +36,7 @@ nav {
   border-radius: 30px;
   height: 50px;
   backdrop-filter: blur(30px);
-  box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0 4px 30px 5px rgba(0, 0, 0, .5);
 }
 
 /* desktop */
@@ -129,21 +133,43 @@ ul li a:hover::after {
   padding-top: 10px;
 }
 
-.landpage-kanan .tombol button {
+.landpage-kanan .tombol button{
   height: 40px;
   width: 160px;
   border-radius: 15px;
   font-weight: 700;
   font-size: 18px;
+  background-color: transparent;
+  border: none;
+  color: #87431d;
+  border: #87431d 2px solid;
+  transition: .5s ease-in-out;
+}
+.landpage-kanan .tombol span button{
+  
+  color: #dbcbbd;
+  border: #dbcbbd 2px solid;
+}
+
+
+.landpage-kanan .tombol button:hover {
+  height: 40px;
+  width: 160px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
   background-color: #87431d;
   border: none;
   box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 1);
   color: #dbcbbd;
+
 }
 
-.landpage-kanan .tombol span button {
+.landpage-kanan .tombol span button:hover {
   background-color: #dbcbbd;
   color: #87431d;
+  cursor: pointer;
 }
 
 .tulisan-2 {
@@ -183,47 +209,68 @@ ul li a:hover::after {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  text-decoration: none;
+  gap: 40px;
 }
 
-.kategori-msm .bagian {
+.kategori-msm a .bagian {
+  transition: .3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 250px;
+  width: 210px;
   height: 300px;
+  text-decoration: none;
   background-color: #ffd93d;
-  margin: 20px;
+
   box-shadow: 0 0px 7px 1px #ffd93d;
   border-radius: 30px;
   padding-bottom: 20px;
 }
+.kategori-msm .bagian:hover {
+  transform: translateY(-10px);
+}
 
-.kategori-msm .bagian h1 {
+
+.kategori-msm a .bagian  h1 {
   font-size: 45px;
+  color: #3a0001;
   margin-bottom: 0;
 }
 
-.kategori-msm .bagian h2 {
+.kategori-msm a .bagian h2 {
+  color: #3a0001;
+  text-decoration: none;
   line-height: 25px;
 }
 
-.kategori-msm .bagian h2 span {
+.kategori-msm a .bagian h2 span {
   font-size: 15px;
 }
 
-.kategori-msm .bagian button {
+.kategori-msm a .bagian button {
   height: 50px;
   width: 150px;
+  cursor: pointer;
   border-radius: 20px;
-  border: none;
-  background-color: #dbcbbd;
-  color: #3a0001;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 700;
-  box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.5);
+  transition: .5s ease-in-out;
 }
+
+.kategori-msm a .bagian button:hover {
+  color: #3a0001;
+  background-color: #dbcbbd;
+  border: #dbcbbd;
+  box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.5);
+
+}
+
 
 .ayo {
   display: flex;
@@ -232,13 +279,7 @@ ul li a:hover::after {
   text-align: center;
   align-items: center;
   margin-top: 20px;
-}
-
-.tempt1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  /* position: absolute; */
 }
 
 .ayo .ajak {
@@ -265,7 +306,7 @@ ul li a:hover::after {
   font-size: 64px;
   margin: 0;
 }
-.ayo img{
+.ayo img {
   margin: 20px;
 }
 
@@ -287,6 +328,25 @@ ul li a:hover::after {
   width: 2100px;
   max-width: 98vw;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 992px) {
   .nav-bar img {
     width: 180px;
