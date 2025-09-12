@@ -1,0 +1,1562 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(ellipse at top, #c87941 0%, #87431d 50%),
+    linear-gradient(135deg, #c87941 0%, #87431d 100%);
+  font-family: "Poppins", sans-serif;
+  /* cursor: none; */
+  padding: 0;
+  margin: 0;
+}
+
+/* .custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: yellow;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.7), 0 0 30px rgba(255, 255, 0, 0.5);
+  transition: transform 0.05s linear; 
+} */
+
+nav {
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.nav-bar {
+  margin: 25px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 0 50px;
+  background-color: rgba(58, 0, 1, 0.6);
+  border-radius: 30px;
+  height: 50px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* desktop */
+ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #ffd93d;
+  font-weight: 500;
+  position: relative;
+}
+
+ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #ffd93d;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  display: block;
+}
+
+ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* hamburger default hidden */
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #ffd93d;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.kosong {
+  height: 100px;
+}
+
+.landing-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.lanpag-decor {
+  margin: 0 20px 0 75px;
+  position: relative;
+}
+.lanpag-decor img {
+  position: absolute;
+  bottom: -200px;
+}
+
+.lanpag-decor .kipas {
+  width: 350px;
+  z-index: 1;
+  opacity: 75%;
+  left: 30px;
+  animation: animasi-kipas 3s infinite ease-in-out;
+}
+
+.lanpag-decor .wayang-kanan {
+  z-index: 2;
+  width: 300px;
+  bottom: -150px;
+  right: -425px;
+  /* rotate: 10deg; */
+  animation: animasi-wayang-kanan 3s infinite ease-in-out;
+  /* bottom: 200px; */
+}
+
+.lanpag-decor .wayang-kiri {
+  width: 290px;
+  z-index: 3;
+  bottom: -175px;
+  animation: animasi-wayang-kiri 3s infinite ease-in-out;
+}
+
+.landpage-kanan {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -50px;
+  padding: 0;
+  padding-right: 75px;
+}
+
+.landpage-kanan .tulisan {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.landpage-kanan .tulisan h1 {
+  color: #dbcbbd;
+  font-size: 52px;
+  text-align: end;
+  text-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 1);
+}
+.landpage-kanan .tulisan img {
+  display: flex;
+  width: 700px;
+  margin-right: -75px;
+  margin-top: -80px;
+}
+
+.landpage-kanan .tombol {
+  display: flex;
+  justify-content: end;
+  gap: 150px;
+  margin-top: 30px;
+  padding-top: 10px;
+}
+
+.landpage-kanan .tombol button {
+  height: 40px;
+  width: 160px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  color: #3a0001;
+  border: #3a0001 2px solid;
+  transition: 0.5s ease-in-out;
+}
+.landpage-kanan .tombol span button {
+  color: #dbcbbd;
+  border: #dbcbbd 2px solid;
+}
+
+.landpage-kanan .tombol button:hover {
+  height: 40px;
+  width: 160px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #3a0001;
+  border: none;
+  box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 0.5);
+  color: #dbcbbd;
+}
+
+.landpage-kanan .tombol span button:hover {
+  background-color: #dbcbbd;
+  color: #3a0001;
+  cursor: pointer;
+}
+
+.tulisan-2 {
+  color: #dbcbbd;
+  padding: 40px 100px;
+}
+.tulisan-2 h1 {
+  text-indent: 30px;
+}
+.tulisan-2 p {
+  text-indent: 30px;
+  text-align: justify;
+}
+
+#garis {
+  width: 275px;
+  height: 3px;
+  border-radius: 100px;
+  background-color: #dbcbbd;
+  margin: -10px 23px 25px;
+}
+
+.temp {
+  display: flex;
+  justify-content: center;
+}
+.tengah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #ffd93d;
+  font-weight: 900;
+  background-color: #3a0001;
+  text-align: center;
+  width: 450px;
+  height: 50px;
+  font-size: 12px;
+  border-radius: 40px;
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.kategori-msm {
+  display: flex;
+  justify-content: center;
+  margin: 30px 20px;
+  text-decoration: none;
+  gap: 65px;
+}
+
+.kategori-msm a .bagian {
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 210px;
+  height: 300px;
+  text-decoration: none;
+  background-color: #ffd93d;
+  border-radius: 30px;
+  padding-bottom: 20px;
+}
+.kategori-msm .bagian:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0px 7px 3px #ffd93d;
+}
+
+.kategori-msm a .bagian h1 {
+  font-size: 45px;
+  color: #3a0001;
+  margin-bottom: 0;
+}
+
+.kategori-msm a .bagian h2 {
+  color: #3a0001;
+  text-decoration: none;
+  line-height: 25px;
+  font-size: 21px;
+}
+
+.kategori-msm a .bagian h2 span {
+  font-size: 15px;
+}
+
+.kategori-msm a .bagian button {
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 2px solid #3a0001;
+  background-color: transparent;
+  color: #3a0001;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 0.5s ease-in-out;
+}
+
+.kategori-msm a .bagian button:hover {
+  color: #ffd93d;
+  background-color: #3a0001;
+  border: #3a0001;
+  box-shadow: 0 0px 7px 1px rgba(0, 0, 0, 0.5);
+}
+
+#game {
+  position: relative;
+  width: 98vw;
+  height: auto;
+  /* border: #ffffff solid 3 px; */
+}
+
+.hiasan-dihp {
+  display: none;
+}
+#hiasan-page-game {
+  z-index: -1;
+  max-width: 98.7vw;
+}
+.ayo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 200px;
+  right: 200px;
+}
+
+.ayo .ajak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-top: 30px;
+  color: #dbcbbd;
+  font-weight: 900;
+  background-color: #3a0001;
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  border-radius: 40px;
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.5);
+}
+.ayo .ajak h1 {
+  font-size: 20px;
+}
+
+.ayo h1 {
+  color: #dbcbbd;
+  font-size: 50px;
+  margin: 0;
+}
+.ayo img {
+  margin: 20px;
+}
+
+.ayo button {
+  margin: 30px;
+  height: 40px;
+  width: 100px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: transparent;
+  border: #ffd93d 2px solid;
+  color: #ffd93d;
+  margin-bottom: 30px;
+  transition: 0.4s ease-in-out;
+}
+
+.ayo button:hover {
+  box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 1);
+  background-color: #ffd93d;
+  color: #3a0001;
+}
+
+#pembatas {
+  max-width: 98.7vw;
+}
+#pembatas_hp {
+  display: none;
+}
+
+#future {
+  max-width: 98.7vw;
+}
+#musik {
+  max-width: 98.7vw;
+}
+
+.pertanyaan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+.pertanyaan h1 {
+  color: #dbcbbd;
+  font-size: 36px;
+  text-align: center;
+}
+
+.pertanyaan .jawaban {
+  display: flex;
+  gap: 100px;
+}
+.pertanyaan .jawaban button {
+  height: 70px;
+  width: 250px;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #3a0001;
+  border: #3a0001 2px solid;
+  font-weight: 900;
+  font-size: 20px;
+  transition: 0.4s ease-in-out;
+}
+.pertanyaan .jawaban button:hover {
+  box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 1);
+  background-color: #3a0001;
+  color: #ffff;
+  transform: scaleX(0.95);
+}
+
+.pertanyaan .jawaban span button {
+  color: #ffff;
+  border: #ffff 2px solid;
+}
+
+.pertanyaan .jawaban span button:hover {
+  box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 1);
+  background-color: #ffffff;
+  color: #87431d;
+  transform: scaleX(0.95);
+}
+
+/* Footer */
+
+footer {
+  height: 700px;
+}
+
+.gradasi {
+  margin-top: 150px;
+  display: block;
+  width: 98.8vw;
+  height: 150px;
+  background: linear-gradient(#87431d, #dbcbbd);
+}
+
+.isi-footer {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 200px;
+  background-color: #dbcbbd;
+  height: 550px;
+  width: 100%;
+}
+
+.pesan {
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: #87431d 3px solid;
+  padding: 0;
+}
+
+.pesan h1 {
+  font-size: 24px;
+  color: #87431d;
+}
+
+.pesan form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pesan form input {
+  height: 50px;
+  width: 300px;
+  background-color: transparent;
+  border: #87431d 3px solid;
+  border-radius: 30px;
+  padding: 20px;
+  color: #3a0001;
+  font-weight: 600;
+  transition: all .5s;
+}
+
+.pesan form input:hover{
+  background-color: rgba(135, 67, 29, .3);
+  color: rgb(255, 255, 255);
+}
+textarea {
+  width: 300px;
+  height: 100px;
+  border: #87431d 3px solid;
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 20px;
+  color: #3a0001;
+  font-weight: 600;
+  font-family: "poppins", sans-serif;
+  transition: all .5s;
+}
+textarea:hover{
+  background-color: rgba(135, 67, 29, .3);
+  color: rgb(255, 255, 255);
+}
+.pesan button {
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: transparent;
+  border: #87431d 3px solid;
+  border-radius: 30px;
+  color: #3a0001;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.pesan button:hover {
+  background-color: #87431d;
+  border: #87431d 3px solid;
+  border-radius: 30px;
+  color: #dbcbbd;
+}
+
+.menu-footer {
+  margin-top: 30px;
+}
+
+.kosong-footer {
+  width: 500px;
+  height: 2px;
+  background-color: #3a0001;
+  border-radius: 30px;
+}
+
+.cp-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.sosmed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  transition: 1s ease-in-out;
+}
+
+.sosmed i {
+  font-size: 30px;
+  color: #87431d;
+}
+.sosmed i:hover {
+  color: #cb9b71;
+  transform: scale(1.2);
+}
+
+.menu-footer li a {
+  color: #3a0001;
+}
+.menu-footer li a::after {
+  background: #3a0001;
+}
+.isi-footer h2 {
+  color: #3a0001;
+}
+.cpr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#dbcbbd, #cb9b71);
+  border-top: rgba(58, 0, 1, 0.3) 2px solid;
+}
+
+.cpr h2 {
+  text-align: center;
+  color: #87431d;
+}
+
+/* Footer end */
+
+/* Tampilan HP */
+@media (min-width: 320px) and (max-width: 767px) {
+  body {
+    background: linear-gradient(#c87941, #87431d);
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  #pembatas {
+    display: none;
+  }
+  #musik {
+    display: none;
+  }
+  #pembatas_hp {
+    display: block;
+    width: 100%;
+  }
+  .nav-bar {
+    box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.3);
+  }
+  .nav-bar img {
+    width: 180px;
+    height: auto;
+  }
+  ul {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background: rgba(146, 90, 59, 0.95);
+    border-radius: 0 0 15px 15px;
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px 24px;
+    margin: 0;
+    display: none;
+
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  ul.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+  #menu-list{
+  transition: all .5s;
+}
+
+  .lanpag-decor {
+    /* display: none; */
+    position: absolute;
+  }
+
+  .lanpag-decor .kipas {
+    left: -200px;
+    top: 290;
+    z-index: -1;
+    opacity: 75%;
+    animation: animasi-kipas 8s infinite ease-in-out;
+  }
+
+  #pembatas {
+    width: 100vw;
+  }
+  .lanpag-decor .wayang-kiri {
+    z-index: -1;
+    opacity: 50%;
+    left: 50px;
+    width: 250px;
+    top: -150px;
+    animation: swing 4s ease-in-out infinite;
+    transform-origin: bottom center; /* supaya ayunan alami */
+  }
+  .lanpag-decor .wayang-kanan {
+    z-index: -1;
+    opacity: 50%;
+    width: 250px;
+    right: 125px;
+    top: -150px;
+    animation: swing 4s ease-in-out infinite;
+    transform-origin: bottom center; /* supaya ayunan alami */
+  }
+
+  .landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .landpage-kanan {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-top: -50px; */
+    padding: 0;
+    padding-right: 75px;
+  }
+
+  .landpage-kanan .tulisan {
+    height: 700px;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .landpage-kanan .tulisan h1 {
+    color: #dbcbbd;
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 1);
+    /* background-color: #3a0001; */
+    padding-left: 70px;
+  }
+  .landpage-kanan .tulisan img {
+    display: flex;
+    width: 28rem;
+  }
+
+  .landpage-kanan .tombol {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: -30px;
+    padding-top: -10px;
+    padding-left: 80px;
+  }
+
+  .landpage-kanan .tombol button {
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    color: #3a0001;
+    border: #3a0001 2px solid;
+    transition: 0.5s ease-in-out;
+  }
+  .landpage-kanan .tombol span button {
+    color: #dbcbbd;
+    border: #dbcbbd 2px solid;
+  }
+
+  .landpage-kanan .tombol button:hover {
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #3a0001;
+    border: none;
+    box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 0.5);
+    color: #dbcbbd;
+  }
+
+  .landpage-kanan .tombol span button:hover {
+    background-color: #dbcbbd;
+    color: #3a0001;
+    cursor: pointer;
+  }
+
+  .tulisan-2 {
+    color: #dbcbbd;
+    padding: 0;
+    margin: 0;
+  }
+  .tulisan-2 h1 {
+    font-size: 15px;
+    text-indent: 50px;
+  }
+  .tulisan-2 p {
+    text-align: justify;
+    font-size: 10px;
+    text-indent: 20px;
+    padding: 0 30px;
+  }
+
+  #garis {
+    width: 140px;
+    height: 2px;
+    border-radius: 100px;
+    margin: -10px 40px 25px;
+  }
+
+  .tengah {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.3);
+    font-size: 9px;
+  }
+
+  .kategori-msm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 20px;
+    text-decoration: none;
+    gap: 40px;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+
+  .kategori-msm a .bagian {
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 135px;
+    height: 190px;
+    text-decoration: none;
+  }
+  .kategori-msm a .bagian h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  .kategori-msm a .bagian h2 {
+    text-decoration: none;
+    line-height: 20px;
+    font-size: 17px;
+  }
+
+  .kategori-msm a .bagian h2 span {
+    font-size: 10.5px;
+  }
+
+  .kategori-msm a .bagian button {
+    height: 50px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.5s ease-in-out;
+  }
+
+  .hiasan-dihp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hiasan-dihp img {
+    width: 180px;
+    z-index: -1;
+    opacity: 33%;
+  }
+
+  #animasi1 {
+    transform: translateX(200px);
+    animation: konsol1-3 4s ease-in-out infinite;
+  }
+
+  #animasi2 {
+    transform: translateX(-200px);
+    animation: konsol2-4 infinite 4s ease-in-out;
+  }
+
+  #hiasan-page-game {
+    display: none;
+  }
+
+  .ayo {
+    position: absolute;
+    top: -200px;
+  }
+
+  .ayo .ajak {
+    margin-bottom: 30px;
+  }
+
+  .ayo .ajak h1 {
+    font-size: 22px;
+    padding: 20px;
+  }
+
+  .ayo .temp2 h1 {
+    width: 250px;
+    height: 100px;
+    font-size: 22px;
+  }
+  .ayo img {
+    width: 400px;
+  }
+
+  .pertanyaan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 0 30px;
+  }
+  .pertanyaan h1 {
+    color: #dbcbbd;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .pertanyaan .jawaban {
+    display: flex;
+    gap: 50px;
+  }
+  .pertanyaan .jawaban button {
+    height: 50px;
+    width: 100px;
+    font-size: 15px;
+  }
+  .pertanyaan .jawaban button:hover {
+    box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .pertanyaan .jawaban span button:hover {
+    box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  footer {
+    height: 700px;
+  }
+
+  .gradasi {
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(rgba(135, 67, 29, 0), #dbcbbd);
+  }
+
+  .isi-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #dbcbbd;
+    height: 550px;
+    width: 100%;
+  }
+
+  .pesan {
+    margin-top: 100px;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: #87431d 3px solid;
+    padding: 30px;
+  }
+
+  .pesan h1 {
+    font-size: 24px;
+    color: #87431d;
+  }
+
+  .pesan form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  
+  .pesan form input {
+    height: 30px;
+    width: 250px;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    padding: 20px;
+    color: #3a0001;
+    font-weight: 600;
+  }
+  textarea {
+    margin-top: 0;
+    padding-top: 5px;
+    width: 250px;
+    vertical-align: top;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    padding: 20px;
+    color: #3a0001;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+    font-size: 12px;
+  }
+  textarea::placeholder {
+    font-size: 12px;
+  }
+
+  .pesan button {
+    margin-left:7px ;
+    width: 75px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 12px;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    color: #3a0001;
+    font-weight: 600;
+    transition: all 0.5s;
+  }
+
+  .pesan button:hover {
+    background-color: #87431d;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    color: #dbcbbd;
+  }
+
+  .logo-menu {
+    margin-top: -250px;
+  }
+
+  .kosong-footer {
+    width: 300px;
+  }
+
+  .cp-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .sosmed {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    transition: 1s ease-in-out;
+  }
+
+  .sosmed i {
+    font-size: 20px;
+    color: #87431d;
+  }
+  .sosmed i:hover {
+    color: #cb9b71;
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  .nav-bar img {
+    width: 180px;
+    height: auto;
+  }
+  ul {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background: rgba(146, 90, 59, 0.95);
+    border-radius: 0 0 15px 15px;
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px 24px;
+    margin: 0;
+    display: none;
+
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  ul.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #pembatas {
+    max-width: 3000px;
+  }
+
+  #musik {
+    max-width: 3000px;
+  }
+
+  .lanpag-decor .kipas {
+    width: 350px;
+    left: -70px;
+  }
+
+  .lanpag-decor .wayang-kanan {
+    width: 250px;
+    bottom: -115px;
+    right: -250px;
+  }
+
+  .lanpag-decor .wayang-kiri {
+    width: 240px;
+    bottom: -150px;
+    left: -75px;
+  }
+
+  .landpage-kanan {
+    padding-bottom: 30px;
+  }
+
+  .landpage-kanan .tulisan {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .landpage-kanan .tulisan h1 {
+    font-size: 45px;
+  }
+  .landpage-kanan .tulisan img {
+    width: 625px;
+  }
+
+  .landpage-kanan .tombol {
+    gap: 50px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .tulisan-2 {
+    width: 800px;
+    padding-right: 75px;
+  }
+  .tulisan-2 h1 {
+    text-indent: 20px;
+  }
+  .tulisan-2 p {
+    text-indent: 30px;
+    text-align: justify;
+  }
+  #garis {
+    width: 300px;
+    height: 3px;
+    border-radius: 100px;
+    background-color: #dbcbbd;
+    margin: -10px 5px 25px;
+  }
+  .kategori-msm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 30px;
+  }
+
+  #game {
+    width: 800px;
+    height: 550px;
+  }
+
+  .hiasan-dihp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    opacity: 33%;
+  }
+
+  #animasi1 {
+    animation: konsol_tablet1-3 3s ease-in-out infinite;
+  }
+
+  #animasi2 {
+    animation: konsol_tablet2-4 3s ease-in-out infinite;
+  }
+
+  #hiasan-page-game {
+    display: none;
+  }
+
+  .ayo .ajak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+
+  .ayo .ajak h1 {
+    font-size: 20px;
+  }
+
+  .ayo h1 {
+    font-size: 35px;
+  }
+  .ayo img {
+    margin: 20px;
+  }
+
+  .ayo button {
+    margin: 30px;
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+.pertanyaan h1 {
+  color: #dbcbbd;
+  font-size: 36px;
+  text-align: center;
+  padding: 0 30px;
+}
+
+  footer {
+    height: 700px;
+  }
+
+  .gradasi {
+    margin-top: 150px;
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(#87431d, #dbcbbd);
+  }
+
+  .isi-footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: #dbcbbd;
+    height: 550px;
+    width: 100vw;
+  }
+
+  .pesan {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: #87431d 3px solid;
+  }
+
+  .pesan h1 {
+    font-size: 24px;
+    color: #87431d;
+  }
+
+  .pesan form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pesan form input {
+    height: 50px;
+    width: 300px;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    padding: 20px;
+    color: #3a0001;
+    font-weight: 600;
+  }
+  textarea {
+    margin-top: 0;
+    padding-top: 5px;
+    vertical-align: top;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    padding: 20px;
+    color: #3a0001;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+    font-size: 14px;
+  }
+
+  .pesan button {
+    width: 75px;
+    height: 33px;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    color: #3a0001;
+    font-weight: 600;
+    transition: all 0.5s;
+  }
+
+  .pesan button:hover {
+    background-color: #87431d;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    color: #dbcbbd;
+  }
+
+  .menu-footer {
+    margin-top: 30px;
+  }
+
+  .kosong-footer {
+    width: 300px;
+    height: 2px;
+    background-color: #3a0001;
+    border-radius: 30px;
+  }
+
+  .cp-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .sosmed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    transition: 1s ease-in-out;
+  }
+
+  .sosmed i {
+    font-size: 30px;
+    color: #87431d;
+  }
+  .sosmed i:hover {
+    color: #cb9b71;
+    transform: scale(1.2);
+  }
+
+  .menu-footer li a {
+    color: #3a0001;
+  }
+  .menu-footer li a::after {
+    background: #3a0001;
+  }
+  .isi-footer h2 {
+    color: #3a0001;
+  }
+  .cpr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#dbcbbd, #cb9b71);
+    border-top: rgba(58, 0, 1, 0.3) 2px solid;
+  }
+
+
+  .cpr h2 {
+    text-align: center;
+    color: #87431d;
+  }
+}
+
+@keyframes animasi-kipas {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animasi-wayang-kanan {
+  0% {
+    transform: scale(1);
+    rotate: 0deg;
+  }
+  10% {
+    transform: scale(1);
+    rotate: 0deg;
+  }
+  30% {
+    transform: scale(1.1);
+    rotate: 3deg;
+  }
+  50% {
+    transform: scale(1.1);
+    rotate: 3deg;
+  }
+  100% {
+    transform: scale(1);
+    rotate: 0deg;
+  }
+}
+
+@keyframes animasi-wayang-kiri {
+  0% {
+    transform: scale(1);
+    rotate: 0deg;
+  }
+  10% {
+    transform: scale(1);
+    rotate: 0deg;
+  }
+  30% {
+    transform: scale(1.1);
+    rotate: -3deg;
+  }
+  50% {
+    transform: scale(1.1);
+    rotate: -3deg;
+  }
+  100% {
+    transform: scale(1);
+    rotate: 0deg;
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes konsol1-3 {
+  0% {
+    transform: translateX(300px) scale(0.9);
+  }
+  25% {
+    transform: translateX(200px) scale(1.1);
+  }
+  75% {
+    transform: translateX(-200px) scale(1.1);
+  }
+  100% {
+    transform: translateX(-300px) scale(0.9);
+  }
+}
+
+@keyframes konsol2-4 {
+  0% {
+    transform: translateX(-300px) scale(0.9);
+  }
+  25% {
+    transform: translateX(-200px) scale(1.1);
+  }
+  75% {
+    transform: translateX(200px) scale(1.1);
+  }
+  100% {
+    transform: translateX(300px) scale(0.9);
+  }
+}
+
+/* hiasan game di tablet */
+@keyframes konsol_tablet1-3 {
+  0% {
+    transform: translateX(600px) scale(0.9);
+  }
+  25% {
+    transform: translateX(300px) scale(1.1);
+  }
+  75% {
+    transform: translateX(200px) scale(1.1);
+  }
+  100% {
+    transform: translateX(-100px) scale(0.9);
+  }
+}
+
+@keyframes konsol_tablet2-4 {
+  0% {
+    transform: translateX(-100px) scale(0.9);
+  }
+  25% {
+    transform: translateX(300px) scale(1.1);
+  }
+  75% {
+    transform: translateX(400px) scale(1.1);
+  }
+  100% {
+    transform: translateX(600px) scale(0.9);
+  }
+}
