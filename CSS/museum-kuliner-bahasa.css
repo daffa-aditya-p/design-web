@@ -1,0 +1,837 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(135deg, #c87941 0%, #87431d 50%, #654321 100%);
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.kosong {
+  height: 125px;
+}
+
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(58, 0, 1, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 15px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.home-btn {
+  background: #ffd93d;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 217, 61, 0.4);
+}
+
+.home-btn i {
+  color: #ffd93d;
+  font-size: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-item a {
+  color: #ffd93d;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-item a:hover {
+  background: #87431d;
+  transform: translateY(-2px);
+}
+
+/* header */
+.header {
+  margin: 10px;
+  padding: 10px 60px;
+  color: #dbcbbd;
+  margin-bottom: 75px;
+}
+
+.garis {
+  height: 3px;
+  width: 300px;
+  background-color: #dbcbbd;
+  margin: 10px 0px 10px -10px;
+  border-radius: 100px;
+}
+
+.header p {
+  text-align: justify;
+  color: #dbcbbd;
+  line-height: 35px;
+  text-indent: 20px;
+}
+
+#pembatas {
+  max-width: 98.7vw;
+}
+#pembatas_hp {
+  display: none;
+}
+/* etalase */
+
+.etalase-1 {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.etalase-1 .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.etalase-1 .text h1 {
+  color: #ffd93d;
+}
+.etalase-1 .text p {
+  text-align: justify;
+  text-indent: 20px;
+  color: #ffd93d;
+}
+
+.etalase-1 img {
+  width: 400px;
+  height: 300px;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+}
+.etalase-1 img:hover {
+  transform: scale(0.95);
+}
+
+.etalase-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 50px;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.etalase-2 .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.etalase-2 .text h1 {
+  color: #ffd93d;
+}
+.etalase-2 .text p {
+  text-align: justify;
+  text-indent: 20px;
+  color: #ffd93d;
+}
+
+.etalase-2 img {
+  width: 450px;
+  height: 350px;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+}
+.etalase-2 img:hover {
+  transform: scale(0.95);
+}
+
+footer {
+  height: 750px;
+}
+
+.gradasi {
+  margin-top: 150px;
+  display: block;
+  width: 98.8vw;
+  height: 150px;
+  background: linear-gradient(rgba(0, 0, 0, 0), #dbcbbd);
+}
+
+.isi-footer {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 200px;
+  background-color: #dbcbbd;
+  height: 600px;
+  width: 100%;
+}
+
+.pesan {
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: #87431d 3px solid;
+  padding: 0;
+}
+
+.pesan h1 {
+  font-size: 24px;
+  color: #87431d;
+}
+
+.pesan form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pesan form input {
+  height: 50px;
+  width: 300px;
+  background-color: transparent;
+  border: #87431d 3px solid;
+  border-radius: 30px;
+  padding: 20px;
+  color: #3a0001;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.pesan form input:hover {
+  background-color: rgba(135, 67, 29, 0.3);
+  color: rgb(255, 255, 255);
+}
+textarea {
+  width: 300px;
+  height: 100px;
+  border: #87431d 3px solid;
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 20px;
+  color: #3a0001;
+  font-weight: 600;
+  font-family: "poppins", sans-serif;
+  transition: all 0.5s;
+}
+textarea:hover {
+  background-color: rgba(135, 67, 29, 0.3);
+  color: rgb(255, 255, 255);
+}
+.pesan button {
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: transparent;
+  border: #87431d 3px solid;
+  border-radius: 30px;
+  color: #3a0001;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.pesan button:hover {
+  background-color: #87431d;
+  border: #87431d 3px solid;
+  border-radius: 30px;
+  color: #dbcbbd;
+}
+
+.menu-footer {
+  margin-top: 30px;
+}
+
+.kosong-footer {
+  width: 500px;
+  height: 2px;
+  background-color: #3a0001;
+  border-radius: 30px;
+}
+
+.cp-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.sosmed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  transition: 1s ease-in-out;
+}
+
+.sosmed i {
+  font-size: 30px;
+  color: #87431d;
+}
+.sosmed i:hover {
+  color: #cb9b71;
+  transform: scale(1.2);
+}
+
+.menu-footer li a {
+  color: #3a0001;
+}
+.menu-footer li a::after {
+  background: #3a0001;
+}
+.isi-footer h2 {
+  color: #3a0001;
+}
+.cpr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#dbcbbd, #cb9b71);
+  border-top: rgba(58, 0, 1, 0.3) 2px solid;
+}
+
+.cpr h2 {
+  text-align: center;
+  color: #87431d;
+}
+
+/* Tampilan Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-container {
+    gap: 0;
+  }
+  .nav-menu {
+    gap: 0;
+  }
+
+  .etalase-1 {
+    flex-direction: column;
+  }
+
+  .etalase-1 img {
+    width: 600px;
+    height: 400px;
+  }
+  .etalase-2 {
+    flex-direction: column;
+  }
+
+  .etalase-2 img {
+    width: 600px;
+    height: 400px;
+  }
+  footer {
+    height: 700px;
+  }
+
+  .gradasi {
+    margin-top: 150px;
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(rgba(0, 0, 0, 0), #dbcbbd);
+  }
+
+  .isi-footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: #dbcbbd;
+    height: 550px;
+    width: 100%;
+  }
+
+  .pesan {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: #87431d 3px solid;
+  }
+
+  .pesan h1 {
+    font-size: 24px;
+    color: #87431d;
+  }
+
+  .pesan form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pesan form input {
+    height: 50px;
+    width: 300px;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    padding: 20px;
+    color: #3a0001;
+    font-weight: 600;
+  }
+  textarea {
+    margin-top: 0;
+    padding-top: 5px;
+    vertical-align: top;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    padding: 20px;
+    color: #3a0001;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+    font-size: 14px;
+  }
+
+  .pesan button {
+    width: 75px;
+    height: 33px;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    color: #3a0001;
+    font-weight: 600;
+    transition: all 0.5s;
+  }
+
+  .pesan button:hover {
+    background-color: #87431d;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    color: #dbcbbd;
+  }
+
+  .menu-footer {
+    margin-top: 30px;
+  }
+
+  .kosong-footer {
+    width: 300px;
+    height: 2px;
+    background-color: #3a0001;
+    border-radius: 30px;
+  }
+
+  .cp-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .sosmed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    transition: 1s ease-in-out;
+  }
+
+  .sosmed i {
+    font-size: 30px;
+    color: #87431d;
+  }
+  .sosmed i:hover {
+    color: #cb9b71;
+    transform: scale(1.2);
+  }
+
+  .menu-footer li a {
+    color: #3a0001;
+  }
+  .menu-footer li a::after {
+    background: #3a0001;
+  }
+  .isi-footer h2 {
+    color: #3a0001;
+  }
+  .cpr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#dbcbbd, #cb9b71);
+    border-top: rgba(58, 0, 1, 0.3) 2px solid;
+  }
+
+  .cpr h2 {
+    text-align: center;
+    color: #87431d;
+  }
+}
+
+/* Tampilan HP */
+
+@media (min-width: 320px) and (max-width: 767px) {
+  nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    background: rgba(58, 0, 1, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 50px;
+    width: 300px;
+  }
+
+  .home-btn {
+    background: #ffd93d;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .home-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 217, 61, 0.4);
+  }
+
+  .home-btn i {
+    color: #ffd93d;
+    font-size: 20px;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .nav-item a {
+    color: #ffd93d;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 0px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-item a:hover {
+    background: #87431d;
+    transform: translateY(-2px);
+  }
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    align-items: center;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background: #ffd93d;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 74px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(58, 0, 1, 0.95);
+    padding: 12px 14px;
+    border-radius: 12px;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    z-index: 2000;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu .nav-item a {
+    display: block;
+    padding: 10px 14px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .kosong{
+    height: 75px;
+  }
+
+  .header{
+    padding: 30px;
+  }
+
+  .garis{
+    width: 275px;
+  }
+  .header h1 {
+    font-size: 1.85em;
+  }
+  .header p {
+    line-height: 2;
+    font-size: 1em;
+
+  }
+
+  #pembatas{
+    display: none;
+  }
+  #pembatas_hp{
+    display: block;
+    width: 100%;
+  }
+  .etalase-1 {
+    flex-direction: column;
+  }
+
+  .etalase-1 h1 {
+    font-size: 1.5em;
+  }
+  .etalase-1 p {
+    font-size: .75em;
+  }
+  
+  .etalase-1 img {
+    width: 300px;
+    height: 200px;
+  }
+  .etalase-2 {
+    flex-direction: column;
+  }
+  
+  .etalase-2 h1 {
+    font-size: 1.5em;
+  }
+  .etalase-2 p {
+    font-size: .75em;
+  }
+  .etalase-2 img {
+    width: 300px;
+    height: 200px;
+  }
+
+    footer {
+    height: 700px;
+  }
+
+  .gradasi {
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(rgba(135, 67, 29, 0), #dbcbbd);
+  }
+
+  .isi-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #dbcbbd;
+    height: 600px;
+    width: 100%;
+  }
+
+  .pesan {
+    margin-top: 100px;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: #87431d 3px solid;
+    padding: 30px;
+  }
+
+  .pesan h1 {
+    font-size: 24px;
+    color: #87431d;
+  }
+
+  .pesan form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  
+  .pesan form input {
+    height: 30px;
+    width: 250px;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    padding: 20px;
+    color: #3a0001;
+    font-weight: 600;
+  }
+  textarea {
+    margin-top: 0;
+    padding-top: 5px;
+    width: 250px;
+    vertical-align: top;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    padding: 20px;
+    color: #3a0001;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+    font-size: 12px;
+  }
+  textarea::placeholder {
+    font-size: 12px;
+  }
+
+  .pesan button {
+    margin-left:7px ;
+    width: 75px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 12px;
+    background-color: transparent;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    color: #3a0001;
+    font-weight: 600;
+    transition: all 0.5s;
+  }
+
+  .pesan button:hover {
+    background-color: #87431d;
+    border: #87431d 3px solid;
+    border-radius: 30px;
+    color: #dbcbbd;
+  }
+
+  .logo-menu {
+    margin-top: -250px;
+  }
+
+  .kosong-footer {
+    width: 300px;
+  }
+
+  .cp-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .sosmed {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    transition: 1s ease-in-out;
+  }
+
+  .sosmed i {
+    font-size: 20px;
+    color: #87431d;
+  }
+  .sosmed i:hover {
+    color: #cb9b71;
+    transform: scale(1.2);
+  }
+}

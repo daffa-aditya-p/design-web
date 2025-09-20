@@ -53,7 +53,7 @@ nav {
   background-color: rgba(58, 0, 1, 0.6);
   border-radius: 30px;
   height: 50px;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -625,7 +625,7 @@ textarea:hover{
 /* Tampilan HP */
 @media (min-width: 320px) and (max-width: 767px) {
   body {
-    background: linear-gradient(#c87941, #87431d);
+  background: linear-gradient(135deg, #c87941 0%, #87431d 50%, #654321 100%);
     font-family: "Poppins", sans-serif;
     padding: 0;
     margin: 0;
