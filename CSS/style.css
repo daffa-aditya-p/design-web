@@ -41,6 +41,7 @@ nav {
   position: fixed;
   width: 100vw;
   top: 0;
+  left: 30px;
   z-index: 1000;
 }
 .nav-bar {
@@ -49,6 +50,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  width: 90vw;
   padding: 0 50px;
   background-color: rgba(58, 0, 1, 0.6);
   border-radius: 30px;
@@ -423,12 +425,11 @@ ul li a:hover::after {
 
 .hiasan-pengumpan-musik img {
   width: 400px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .hiasan-pengumpan-musik img:hover {
   transform: scale(0.95);
 }
-
 
 .pertanyaan {
   display: flex;
@@ -443,8 +444,8 @@ ul li a:hover::after {
   font-size: 50px;
   text-align: center;
 }
-.pertanyaan h1 span{
- color: #dbdbdb;
+.pertanyaan h1 span {
+  color: #dbdbdb;
 }
 
 .pertanyaan .jawaban {
@@ -479,6 +480,64 @@ ul li a:hover::after {
   background-color: #ffffff;
   color: #87431d;
   transform: scaleX(0.95);
+}
+
+.quiz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+  padding-right: -100px;
+}
+
+.hiasan-quiz img {
+  width: 400px;
+}
+
+.quiz-kanan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.quiz-kanan button {
+  width: 400px;
+  box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 0.5);
+  height: 65px;
+  background-color: #ffd93d;
+  border-radius: 35px;
+  color: #3a0001;
+  border: none;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.quiz-kanan .isi {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 100px;
+}
+.quiz-kanan .isi h1 {
+  color: #dbcbbd;
+  text-align: center;
+  font-size: 28px;
+}
+.quiz-kanan .isi h1 span {
+  color: #3a0001;
+}
+
+.quiz-kanan .isi iframe{
+  background-color: rgba(58, 0, 1, .3);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  border: #ffd93d 2px solid;
+  padding: 20px;
 }
 
 /* Footer */
@@ -540,11 +599,11 @@ footer {
   padding: 20px;
   color: #3a0001;
   font-weight: 600;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.pesan form input:hover{
-  background-color: rgba(135, 67, 29, .3);
+.pesan form input:hover {
+  background-color: rgba(135, 67, 29, 0.3);
   color: rgb(255, 255, 255);
 }
 textarea {
@@ -557,10 +616,10 @@ textarea {
   color: #3a0001;
   font-weight: 600;
   font-family: "poppins", sans-serif;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-textarea:hover{
-  background-color: rgba(135, 67, 29, .3);
+textarea:hover {
+  background-color: rgba(135, 67, 29, 0.3);
   color: rgb(255, 255, 255);
 }
 .pesan button {
@@ -646,11 +705,10 @@ textarea:hover{
 
 /* Tampilan HP */
 @media (min-width: 320px) and (max-width: 767px) {
- 
- 
   body {
     background: radial-gradient(ellipse at top, #c87941 0%, #87431d 100%),
-    linear-gradient(135deg, #c87941 0%, #87431d 100%);    font-family: "Poppins", sans-serif;
+      linear-gradient(135deg, #c87941 0%, #87431d 100%);
+    font-family: "Poppins", sans-serif;
     padding: 0;
     margin: 0;
     width: 100vw;
@@ -703,9 +761,9 @@ textarea:hover{
   #menu-toggle {
     display: block;
   }
-  #menu-list{
-  transition: all .5s;
-}
+  #menu-list {
+    transition: all 0.5s;
+  }
 
   .lanpag-decor {
     /* display: none; */
@@ -724,7 +782,7 @@ textarea:hover{
     width: 100vw;
   }
 
-  .lanpag-decor .kipas{
+  .lanpag-decor .kipas {
     opacity: 100%;
     top: -100px;
   }
@@ -832,7 +890,7 @@ textarea:hover{
     color: #3a0001;
     cursor: pointer;
   }
-
+  
   .tulisan-2 {
     color: #dbcbbd;
     padding: 0;
@@ -925,7 +983,7 @@ textarea:hover{
     z-index: -1;
     opacity: 33%;
   }
-
+  
   #animasi1 {
     transform: translateX(200px);
     animation: konsol1-3 4s ease-in-out infinite;
@@ -935,7 +993,7 @@ textarea:hover{
     transform: translateX(-200px);
     animation: konsol2-4 infinite 4s ease-in-out;
   }
-
+  
   #hiasan-page-game {
     display: none;
   }
@@ -962,26 +1020,109 @@ textarea:hover{
   .ayo img {
     width: 400px;
   }
+  
 
-  .hiasan-pengumpan-musik {
-display: none;
+  .pengumpan-musik{
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
   }
-
   .hiasan-pengumpan-musik img {
     width: 300px;
   }
 
-  
-.pertanyaan h1 {
-  color: #3a0001;
-  font-size: 36px;
-  text-align: center;
-  padding: 0 30px;
-}
+  .pertanyaan{
+    width: 330px;
+  }
 
-.pertanyaan h1 span{
-color: #dbcbbd;
-}
+  .pertanyaan h1 {
+    color: #3a0001;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .pertanyaan h1 span {
+    color: #dbcbbd;
+  }
+
+  .quiz {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+    padding-right: -100px;
+  }
+
+  .hiasan-quiz img {
+    width: 300px;
+  }
+
+  .quiz-kanan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .quiz-kanan button {
+    width: 300px;
+    box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 0.5);
+    height: 50px;
+    background-color: #ffd93d;
+    border-radius: 35px;
+    color: #3a0001;
+    border: none;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .quiz-kanan .isi {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 100px;
+  }
+  .quiz-kanan .isi h1 {
+    color: #dbcbbd;
+    text-align: center;
+    font-size: 28px;
+  }
+  .quiz-kanan .isi h1 span {
+    color: #3a0001;
+  }
+
+  .quiz-kanan .isi button {
+    width: 150px;
+    height: 35px;
+    border-radius: 35px;
+    color: #3a0001;
+    background: transparent;
+    border: 2px #3a0001 solid;
+    box-shadow: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .quiz-kanan .isi button:hover {
+    box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 0.5);
+    background-color: #3a0001;
+    color: #c87941;
+  }
+  
+  .quiz-kanan .isi iframe{
+    background-color: rgba(58, 0, 1, .3);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    border: #ffd93d 2px solid;
+    padding: 20px;
+    width: 70vw;
+  }
 
   footer {
     height: 700px;
@@ -1029,7 +1170,7 @@ color: #dbcbbd;
     align-items: start;
     gap: 20px;
   }
-  
+
   .pesan form input {
     height: 30px;
     width: 250px;
@@ -1059,7 +1200,7 @@ color: #dbcbbd;
   }
 
   .pesan button {
-    margin-left:7px ;
+    margin-left: 7px;
     width: 75px;
     height: 30px;
     border-radius: 20px;
@@ -1113,13 +1254,14 @@ color: #dbcbbd;
     transform: scale(1.2);
   }
 
-  .cpr{
+  .cpr {
     width: 100vw;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  body, html {
+  body,
+  html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -1286,7 +1428,6 @@ color: #dbcbbd;
     font-size: 20px;
   }
 
-  
   .hiasan-pengumpan-musik {
     height: 500px;
     display: flex;
@@ -1298,17 +1439,86 @@ color: #dbcbbd;
     width: 300px;
   }
 
-  
-.pertanyaan h1 {
-  color: #3a0001;
-  font-size: 36px;
-  text-align: center;
-  padding: 0 30px;
-}
+  .pertanyaan h1 {
+    color: #3a0001;
+    font-size: 36px;
+    text-align: center;
+    padding: 0 30px;
+  }
 
-.pertanyaan h1 span{
-color: #dbcbbd;
-}
+  .pertanyaan h1 span {
+    color: #dbcbbd;
+  }
+
+  .quiz {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+    padding-right: -100px;
+  }
+
+  .hiasan-quiz img {
+    width: 300px;
+  }
+
+  .quiz-kanan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .quiz-kanan button {
+    width: 300px;
+    box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 0.5);
+    height: 50px;
+    background-color: #ffd93d;
+    border-radius: 35px;
+    color: #3a0001;
+    border: none;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .quiz-kanan .isi {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 100px;
+  }
+  .quiz-kanan .isi h1 {
+    color: #dbcbbd;
+    text-align: center;
+    font-size: 28px;
+  }
+  .quiz-kanan .isi h1 span {
+    color: #3a0001;
+  }
+
+  .quiz-kanan .isi button {
+    width: 150px;
+    height: 35px;
+    border-radius: 35px;
+    color: #3a0001;
+    background: transparent;
+    border: 2px #3a0001 solid;
+    box-shadow: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .quiz-kanan .isi button:hover {
+    box-shadow: 0 0px 20px 2px rgba(0, 0, 0, 0.5);
+    background-color: #3a0001;
+    color: #c87941;
+  }
 
   footer {
     height: 700px;
@@ -1456,7 +1666,6 @@ color: #dbcbbd;
     background: linear-gradient(#dbcbbd, #cb9b71);
     border-top: rgba(58, 0, 1, 0.3) 2px solid;
   }
-
 
   .cpr h2 {
     text-align: center;
@@ -1606,9 +1815,17 @@ color: #dbcbbd;
   }
 }
 
-@keyframes kelap-kelip{
-  0%{opacity: 100%;}
-  40%{opacity: 50%;}
-  60%{opacity: 50%;}
-  100%{opacity: 100%;}
+@keyframes kelap-kelip {
+  0% {
+    opacity: 100%;
+  }
+  40% {
+    opacity: 50%;
+  }
+  60% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
