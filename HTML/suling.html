@@ -7,17 +7,18 @@
     <title>Suling Sunda | Warisan Nusantara </title>
     <link rel="shortcut icon" href="/aset/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/CSS/style-suling.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
-    <h1 class="title">Suling Sunda</h1>
-    <p class="instructions">
+<body >
+    <h1 data-aos="fade-up" data-aos-duration="2000" class="title">Suling Sunda</h1>
+    <p  data-aos="fade-up" data-aos-duration="2000" class="instructions">
         Klik/Tap lubang atau tekan 1-8 untuk memainkan suling Sunda<br>
         Tahan untuk nada panjang - Lepas untuk berhenti<br>
         <strong>Do - Re - Mi - Fa - Sol - La - Si - Do</strong>
     </p>
 
-    <div class="flute-container">
+    <div class="flute-container" data-aos="fade-up" data-aos-duration="2000">
         <div class="flute">
             <div class="bamboo-rings"></div>
             <div class="hole" data-note="0" data-key="1"></div>
@@ -31,7 +32,7 @@
         </div>
     </div>
 
-    <div class="key-labels">
+    <div class="key-labels" data-aos="fade-up" data-aos-duration="2000">
         <span class="key-label">1</span>
         <span class="key-label">2</span>
         <span class="key-label">3</span>
@@ -50,6 +51,10 @@
     </footer>
 
     <script src="/JS/suling-script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

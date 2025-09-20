@@ -6,24 +6,22 @@
 
 a {
   text-decoration: none;
-  color: inherit;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
 }
 
 body {
   background: linear-gradient(135deg, #c87941 0%, #87431d 50%, #654321 100%);
   background-attachment: fixed;
   font-family: "Poppins", sans-serif;
-  line-height: 1.6;
-  color: #333;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
-.kosong {
-  height: 125px;
+#pembatas {
+  max-width: 100%;
+}
+#pembatas_hp {
+  display: none;
 }
 
 nav {
@@ -87,104 +85,96 @@ nav {
   transform: translateY(-2px);
 }
 
-/* header */
-.header {
-  margin: 10px;
-  padding: 10px 60px;
-  color: #dbcbbd;
-  margin-bottom: 75px;
-}
-
-.garis {
-  height: 3px;
-  width: 300px;
-  background-color: #dbcbbd;
-  margin: 10px 0px 10px -10px;
-  border-radius: 100px;
-}
-
-.header p {
-  text-align: justify;
-  color: #dbcbbd;
-  line-height: 35px;
-  text-indent: 20px;
-}
-
-#pembatas {
-  max-width: 98.7vw;
-
-}
-#pembatas_hp {
-  display: none;
-}
-/* etalase */
-
-.etalase-1 {
-  display: flex;
-  flex-direction: row;
-  padding: 50px;
-  align-items: center;
-  gap: 50px;
-  margin-bottom: 50px;
-}
-
-.etalase-1 .text {
+.container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  max-width: 100%;
+  margin: 0;
+  min-height: 100vh;
+  border-radius: 0;
+  gap: 100px;
+  box-shadow: none;
 }
-.etalase-1 .text h1 {
-  color: #ffd93d;
+
+.judul {
+  font-weight: 600;
+  font-size: 46px;
 }
-.etalase-1 .text p {
+
+.kosong {
+  height: 115px;
+  background: transparent;
+}
+
+h1 {
+  color: #ffd700;
+  font-size: 3em;
+  text-align: start;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+  padding: 0 40px;
+}
+
+.intro-text {
+  color: #f5deb3;
+  font-size: 1.1em;
+  line-height: 1.8;
   text-align: justify;
-  text-indent: 20px;
-  color: #ffd93d;
+  margin-bottom: 40px;
+  text-indent: 30px;
+  padding: 0 40px;
 }
 
-.etalase-1 img {
-  width: 400px;
-  height: 300px;
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s;
-}
-.etalase-1 img:hover {
-  transform: scale(0.95);
-}
-
-.etalase-2 {
+.content-section {
   display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 50px;
+  padding: 40px;
+}
+
+.content-section:nth-child(even) {
   flex-direction: row-reverse;
-  padding: 50px;
-  align-items: center;
-  gap: 50px;
-  margin-bottom: 50px;
 }
 
-.etalase-2 .text {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.etalase-2 .text h1 {
-  color: #ffd93d;
-}
-.etalase-2 .text p {
+.text-content {
+  flex: 1;
+  color: #f5deb3;
+  font-size: 1em;
+  line-height: 1.7;
   text-align: justify;
-  text-indent: 20px;
-  color: #ffd93d;
+  text-indent: 25px;
 }
 
-.etalase-2 img {
-  width: 450px;
-  height: 350px;
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s;
+.image-content {
+  flex: 0 0 400px;
+  position: relative;
 }
-.etalase-2 img:hover {
-  transform: scale(0.95);
+
+.image-content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+  transform: scale(1.05);
+}
+
+.decorative-border {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.tebal-text {
+  color: #ffd700;
+  font-weight: bold;
 }
 
 footer {
@@ -346,47 +336,51 @@ textarea:hover {
   color: #87431d;
 }
 
-/* Tampilan Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .nav-container {
+  #pembatas {
+    max-width: 100%;
+  }
+  #pembatas_hp {
+    display: none;
+  }
+    .nav-container {
     gap: 0;
   }
   .nav-menu {
     gap: 0;
   }
 
-  .etalase-1 {
+
+  .container{
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .content-section{
+    display: flex;
+    flex-direction: column;
+  }
+  .content-section:nth-child(even) {
+    display: flex;
     flex-direction: column;
   }
 
-  .etalase-1 img {
-    width: 600px;
-    height: 400px;
-  }
-  .etalase-2 {
-    flex-direction: column;
-  }
-
-  .etalase-2 img {
-    width: 600px;
-    height: 400px;
-  }
  footer {
     height: 700px;
-  }
+    }
 
   .gradasi {
     margin-top: 150px;
     display: block;
     width: 100%;
     height: 150px;
-    background: linear-gradient(#87431d, #dbcbbd);
+    background: linear-gradien( rgba(0,0,0,0), #dbcbbd);
   }
 
   .isi-footer {
     display: flex;
     align-items: center;
     text-align: center;
+    flex-direction: row;
     justify-content: center;
     gap: 50px;
     background-color: #dbcbbd;
@@ -408,8 +402,12 @@ textarea:hover {
   }
 
   .pesan h1 {
-    font-size: 24px;
+    font-size: 20px;
     color: #87431d;
+    margin-left: -40px;
+    width: 275px;
+    text-align: start;
+    text-shadow: none;
   }
 
   .pesan form {
@@ -518,15 +516,49 @@ textarea:hover {
     border-top: rgba(58, 0, 1, 0.3) 2px solid;
   }
 
-
   .cpr h2 {
     text-align: center;
     color: #87431d;
   }
+
 }
-/* Tampilan HP */
+
+
 
 @media (min-width: 320px) and (max-width: 767px) {
+  #pembatas {
+    display: none;
+  }
+
+  #pembatas_hp {
+    display: block;
+    width: 100%;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .content-section {
+    flex-direction: column !important;
+  }
+
+  .image-content {
+    flex: none;
+    width: 100%;
+  }
+
+  .intro-text,
+  .text-content {
+    font-size: 1em;
+    text-indent: 20px;
+  
+}
+
   nav {
     position: fixed;
     top: 20px;
@@ -538,15 +570,14 @@ textarea:hover {
     background: rgba(58, 0, 1, 0.6);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     /* padding: 0 20px; */
-
   }
 
   .nav-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 5px;
     height: 50px;
-    justify-content: space-between;
     width: 80vw;
   }
 
@@ -650,69 +681,7 @@ textarea:hover {
     text-align: center;
     border-radius: 8px;
   }
-
-  .nav-container {
-    justify-content: space-between;
-  }
-
-  .kosong{
-    height: 75px;
-  }
-
-  .header{
-    padding: 30px;
-  }
-
-  .garis{
-    width: 275px;
-  }
-  .header h1 {
-    font-size: 1.85em;
-  }
-  .header p {
-    line-height: 2;
-    font-size: 1em;
-
-  }
-
-  #pembatas{
-    display: none;
-  }
-  #pembatas_hp{
-    display: block;
-    width: 100%;
-  }
-  .etalase-1 {
-    flex-direction: column;
-  }
-
-  .etalase-1 h1 {
-    font-size: 1.5em;
-  }
-  .etalase-1 p {
-    font-size: .75em;
-  }
-  
-  .etalase-1 img {
-    width: 300px;
-    height: 200px;
-  }
-  .etalase-2 {
-    flex-direction: column;
-  }
-  
-  .etalase-2 h1 {
-    font-size: 1.5em;
-  }
-  .etalase-2 p {
-    font-size: .75em;
-  }
-  .etalase-2 img {
-    width: 300px;
-    height: 200px;
-  }
-
-    footer {
+  footer {
     height: 700px;
   }
 
@@ -748,8 +717,11 @@ textarea:hover {
   }
 
   .pesan h1 {
-    font-size: 24px;
+    font-size: 20px;
     color: #87431d;
+    text-shadow: none;
+    letter-spacing: normal;
+    padding: 0;
   }
 
   .pesan form {

@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="shortcut icon" href="/aset/logo.png" type="image/x-icon">
 </head>
 
@@ -39,12 +41,12 @@
     <section>
         <div class="kosong"></div>
         <div class="landing-page">
-            <div class="lanpag-decor">
+            <div class="lanpag-decor" data-aos="fade-up" data-aos-duration="2000">
                 <img class="kipas" src="/aset/3.png" alt="">
                 <img class="wayang-kanan" src="/aset/2.png" alt="">
                 <img class="wayang-kiri" src="/aset/1.png" alt="">
             </div>
-            <div class="landpage-kanan">
+            <div class="landpage-kanan" data-aos="fade-up" data-aos-duration="2000">
                 <div class="tulisan">
                     <h1>Lestarikan Budaya <br>di Era Digital</h1>
                     <img src="/aset/Indonesia.svg" alt="Peta Indonesia" width=500px">
@@ -61,7 +63,7 @@
     <img id="pembatas_hp" src="/aset/Pembatas_HP.png" alt="">
     <!-- PENGUMPAN MUSEUM MULAI -->
     <section id="museum">
-        <div class="tulisan-2">
+        <div class="tulisan-2" data-aos="fade-up" data-aos-duration="2000">
             <h1>Meseum Digital</h1>
             <div id="garis"></div>
             <p> Bangsa kita adalah bangsa yang kaya akan budaya dan keberagaman. Agar warisan ini tidak hilang ditelan
@@ -73,7 +75,7 @@
         </div>
 
         <div class="temp">
-            <div class="tengah">
+            <div class="tengah" data-aos="fade-up" data-aos-duration="2000">
                 <h1>
                     Bangsa Indonesia Memiliki :
                 </h1>
@@ -81,14 +83,14 @@
         </div>
 
         <div class="kategori-msm">
-            <a href="musum-suku.html">
+            <a href="museum-suku.html" data-aos="flip-right" data-aos-duration="2000">
                 <div class="bagian">
                     <h1>1234</h1>
                     <h2>Jenis Suku <br> <span>dari sabang-marauke</span></h2>
                     <button>Pelajari</button>
                 </div>
             </a>
-            <a href="museum-kuliner.html">
+            <a href="museum-kuliner.html" data-aos="flip-left" data-aos-duration="2000">
                 <div class="bagian">
                     <h1>1234</h1>
                     <h2>Jenis Kuliner <br> <span>dari sabang-marauke</span></h2>
@@ -96,14 +98,14 @@
                 </div>
             </a>
 
-            <a href="">
+            <a href="museum-alatmusik.html" data-aos="flip-right" data-aos-duration="2000">
                 <div class="bagian">
                     <h1>1234</h1>
                     <h2>Jenis Alat Musik <br> <span>dari sabang-marauke</span></h2>
                     <button>Pelajari</button>
                 </div>
             </a>
-            <a href="museum-bahasa.html">
+            <a href="museum-bahasa.html" data-aos="flip-left" data-aos-duration="2000">
                 <div class="bagian">
                     <h1>1234</h1>
                     <h2>Jenis Bahasa <br> <span>dari sabang-marauke</span></h2>
@@ -129,8 +131,8 @@
             <img src="/aset/Hiasan-game-HP.svg" alt="" id="animasi1">
             <img src="/aset/Hiasan-game-HP.svg" alt="" id="animasi2">
         </div>
-        <img id="hiasan-page-game" src="/aset/hiasan-page-game.png" alt="" width=100%>
-        <div class="ayo">
+        <img id="hiasan-page-game" src="/aset/hiasan-page-game.png" alt="" width=102%>
+        <div class="ayo" data-aos="fade-up" data-aos-duration="3000">
             <div class="temp1">
                 <div class="ajak">
                     <h1>Ayo Main Game</h1>
@@ -154,14 +156,13 @@
     <img id="pembatas_hp" src="/aset/Pembatas_HP.png" alt="">
 
     <!-- PENGUMPAN MUSIK MULAI-->
-    <section>
+    <section class="pengumpan-musik" data-aos="fade-up" data-aos-duration="2000">
+        <div class="hiasan-pengumpan-musik">
+            <a href="suling.html"><img src="/aset/hiasan-suling.svg" alt=""></a>
+        </div>
         <div class="pertanyaan">
-            <h1>Mari kita bermain musik tradisional dalam bentuk digital !
-            </h1>
-            <div class="jawaban">
-                <a href="suling.html"><button>Suling</button></a>
-                <a href=""><span><button> lorem ipsum</span></button></a>
-            </div>
+            <h1>Mari kita bermain <span>suling</span> <br> dalam bentuk digital !</h1>
+            <a href="suling.html"><button>Mulai</button></a>
         </div>
     </section>
     <!-- PENGUMPAN MUSIK TUTUP-->
@@ -212,6 +213,10 @@
     <!-- FOOTER SELESAI -->
     <script src="/JS/navbar.js"></script>
     <script src="/JS/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- <script src="/JS/cursor.js"></script> -->
 </body>
 

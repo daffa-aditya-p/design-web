@@ -459,3 +459,121 @@ body::before {
     }
   }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  body {
+    background: radial-gradient(ellipse at top, #c87941 0%, #87431d 100%),
+      linear-gradient(135deg, #c87941 0%, #87431d 100%);
+    font-family: "Poppins", sans-serif;
+
+    overflow: auto;
+    padding-bottom: 96px;
+  }
+
+  .title {
+    font-size: clamp(1.4rem, 6vw, 2.2rem);
+    margin-bottom: 14px;
+  }
+
+  .instructions {
+    font-size: clamp(0.9rem, 3.6vw, 1.1rem);
+    margin-bottom: 18px;
+    padding: 10px 14px;
+    max-width: 92vw;
+  }
+
+  .flute-container {
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  /* Make flute scale to viewport width while preserving detail */
+  .flute {
+    width: 450px;
+    height: 65px;
+    border-radius: 28px;
+  }
+
+  .flute::before {
+    left: 4%;
+    width: 30px;
+    height: 80px;
+    top: -8px;
+  }
+
+  .flute::after {
+    height: 48px;
+    border-radius: 22px;
+  }
+
+  .hole {
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .hole:nth-child(1) {
+    left: 2%;
+  }
+  .hole:nth-child(2) {
+    left: 18.5%;
+  }
+  .hole:nth-child(3) {
+    left: 28.6%;
+  }
+  .hole:nth-child(4) {
+    left: 38.6%;
+  }
+  .hole:nth-child(5) {
+    left: 48.6%;
+  }
+  .hole:nth-child(6) {
+    left: 58.6%;
+  }
+  .hole:nth-child(7) {
+    left: 68.6%;
+  }
+  .hole:nth-child(8) {
+    left: 78.6%;
+  }
+
+  .key-labels {
+    gap: 14px;
+    margin-left: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .key-label {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    padding: 6px 8px;
+  }
+
+  .current-note {
+    font-size: clamp(1.4rem, 8vw, 2rem);
+    min-height: 44px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 8px;
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 217, 61, 0.12);
+  }
+
+  .footer button {
+    height: 40px;
+    width: 86px;
+    font-size: 16px;
+  }
+
+  /* small layout tweaks */
+  .sound-wave {
+    display: none;
+  }
+}
